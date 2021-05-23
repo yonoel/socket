@@ -71,8 +71,8 @@ public class NioServer {
                     String message = new String(data);
 
                     System.out.println("receive message from client, size:" + buffer.position() + " msg: " + message);
-//                    ByteBuffer outbuffer = ByteBuffer.wrap(("server.".concat(msg)).getBytes());
-//                    channel.write(outbuffer);
+                    ByteBuffer outbuffer = ByteBuffer.wrap(("server.".concat(message)).getBytes());
+                    channel.write(outbuffer);
                 }
             }
         }
