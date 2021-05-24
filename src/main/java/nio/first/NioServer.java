@@ -16,6 +16,12 @@ import java.util.Iterator;
  * @create: 2019/04/23
  */
 public class NioServer {
+    public static void main(String[] args) throws Exception{
+         NioServer server = new NioServer();
+        server = server.init(8080);
+        server.listen();
+
+    }
     //通道管理器
     private Selector selector;
 
